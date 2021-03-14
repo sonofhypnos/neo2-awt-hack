@@ -964,15 +964,15 @@ public class KeyEvent extends InputEvent {
     //======================= begin of ugly hack =========================
     static final int[] neo2level4Hacks = new int[128];
     static {
-        neo2level4Hacks[VK_I] = VK_LEFT;
-        neo2level4Hacks[VK_E] = VK_RIGHT;
-        neo2level4Hacks[VK_L] = VK_UP;
-        neo2level4Hacks[VK_A] = VK_DOWN;
-        neo2level4Hacks[VK_U] = VK_HOME;
-        neo2level4Hacks[VK_O] = VK_END;
-        neo2level4Hacks[VK_Z] = VK_UNDO;
-        neo2level4Hacks[VK_W] = VK_PAGE_DOWN;
-        neo2level4Hacks[VK_X] = VK_PAGE_UP;
+        neo2level4Hacks[VK_S] = VK_LEFT;
+        neo2level4Hacks[VK_F] = VK_RIGHT;
+        neo2level4Hacks[VK_E] = VK_UP;
+        neo2level4Hacks[VK_D] = VK_DOWN;
+        neo2level4Hacks[VK_A] = VK_HOME;
+        neo2level4Hacks[VK_G] = VK_END;
+        neo2level4Hacks[VK_B] = VK_UNDO;
+        neo2level4Hacks[VK_T] = VK_PAGE_DOWN;
+        neo2level4Hacks[VK_Q] = VK_PAGE_UP;
     }
     //======================= end of ugly hack =========================
 
@@ -1048,17 +1048,17 @@ public class KeyEvent extends InputEvent {
         if (keyChar == 0xffff && keyLocation == 1 && neoKeyCode != 0) {
             //System.out.println("using neo keycode");
             this.keyCode = neoKeyCode;
-        } else if (keyChar == VK_TAB && keyLocation == 1 && (keyCode == '8' || keyCode == 0)){// tab on key '8' and on key 'ö'
+        } else if (keyChar == VK_TAB && keyLocation == 1 && keyCode == 'X'){
             //System.out.println("using neo tab");
             this.keyCode = VK_TAB;
-        } else if (keyChar == VK_ESCAPE && keyLocation == 1 && keyCode == 0) {//escape on key 'ü'
+        } else if (keyChar == VK_ESCAPE && keyLocation == 1 && keyCode == 'Y') {
             //System.out.println("using neo esc");
             this.keyCode = VK_ESCAPE;
-        } else if (keyChar == VK_BACK_SPACE && keyLocation == 1 && keyCode == 'V') {
+        } else if (keyChar == VK_BACK_SPACE && keyLocation == 1 && keyCode == 'W') {
             this.keyCode = VK_BACK_SPACE;
-        } else if (keyChar == VK_DELETE && keyLocation == 1 && keyCode == 'C') {
+        } else if (keyChar == VK_DELETE && keyLocation == 1 && keyCode == 'R') {
             this.keyCode = VK_DELETE;
-        } else if (keyChar == VK_ENTER && keyLocation == 1 && keyCode == 'P') {
+        } else if (keyChar == VK_ENTER && keyLocation == 1 && keyCode == 'V') {
             this.keyCode = VK_ENTER;
         //} else if () {  //i cannot find a way to detect "insert" :(
         //    this.keyCode = VK_INSERT;
